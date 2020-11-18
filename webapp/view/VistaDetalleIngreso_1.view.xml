@@ -1,0 +1,269 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.maestroDetalle.controller.VistaDetalleIngreso_1" xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Page title="Orden de Ingreso ### de orden de compra ###" showHeader="true" showFooter="true" showNavButton="false">
+		<content>
+			<ObjectHeader intro="Intro." title="Orden de Ingreso ### de orden de compra ###" number="" numberUnit="" numberState="None"
+				titleActive="false" backgroundDesign="Translucent" condensed="false" visible="true">
+				<attributes/>
+				<statuses>
+					<ObjectStatus title="Estado de ingreso" text="Abierto" state="None" visible="true"/>
+				</statuses>
+				<markers/>
+			</ObjectHeader>
+			<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+				selectedKey="Ok">
+				<items>
+					<IconTabFilter icon="sap-icon://hint" iconColor="Default" text="Revisar" count="" design="Vertical" showAll="false" textDirection="Inherit"
+						enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false">
+								<items>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Orden de compra:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="auto"/>
+									<ComboBox editable="true" enabled="false" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<CheckBox text="Remisión" selected="true" editable="true" enabled="false" visible="true" width="auto" textDirection="Inherit"
+										wrapping="false" useEntireWidth="true"/>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Número de remisión:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width=""/>
+									<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="false" required="false" valueStateText="Invalid entry" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Número de factura:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width=""/>
+									<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="false" required="false" valueStateText="Invalid entry" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								class="sapUiResponsiveMargin">
+								<infoToolbar/>
+								<headerToolbar/>
+								<columns>
+									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Elemento a ingresar de orden de compra" width="auto" maxLines="4" wrapping="true" textAlign="Begin" textDirection="Inherit"
+												visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Valor unitario" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad pendiente para ingresar" width="auto" maxLines="3" wrapping="true" textAlign="Begin" textDirection="Inherit"
+												visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad a ingresar" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Fecha de vencimiento" width="auto" maxLines="3" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Lote" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Borrar elemento" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Active">
+										<cells>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+												<items>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+												</items>
+											</ComboBox>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+											<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+												valueFormat="yyyyMMdd"/>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+											<Button text="" type="Reject" icon="sap-icon://delete" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator icon="" iconDensityAware="false"/>
+					<IconTabFilter icon="sap-icon://edit" iconColor="Default" text="Modificar" count="" design="Vertical" showAll="false"
+						textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<OverflowToolbar width="auto" height="46px" design="Solid" visible="true" enabled="true">
+								<content>
+									<ToolbarSpacer width=""/>
+									<Button text="Ingresar nuevo elemento" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+									<Button text="Guardar" type="Emphasized" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+								</content>
+							</OverflowToolbar>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false">
+								<items>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Orden de compra:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="auto"/>
+									<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<CheckBox text="Remisión" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit"
+										wrapping="false" useEntireWidth="true"/>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Número de remisión:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width=""/>
+									<TextArea
+										id="sap_IconTabBar_Page_0-content-sap_m_IconTabBar-2-items-sap_m_IconTabFilter-3-content-sap_m_HBox-1604272399017-items-sap_m_TextArea-10"
+										rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="true" valueStateText="Invalid entry" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Número de factura:" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width=""/>
+									<TextArea
+										id="sap_IconTabBar_Page_0-content-sap_m_IconTabBar-2-items-sap_m_IconTabFilter-3-content-sap_m_HBox-1604272399017-items-sap_m_TextArea-14"
+										rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="true" valueStateText="Invalid entry" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								class="sapUiResponsiveMargin">
+								<infoToolbar/>
+								<headerToolbar/>
+								<columns>
+									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Elemento a ingresar de orden de compra" width="auto" maxLines="4" wrapping="true" textAlign="Begin" textDirection="Inherit"
+												visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Valor unitario" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad pendiente para ingresar" width="auto" maxLines="3" wrapping="true" textAlign="Begin" textDirection="Inherit"
+												visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad a ingresar" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Fecha de vencimiento" width="auto" maxLines="3" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Lote" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Borrar elemento" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Active">
+										<cells>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+												<items>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+												</items>
+											</ComboBox>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+											<DatePicker width="auto" displayFormat="medium" required="false" valueStateText="Invalid entry" enabled="true" visible="true"
+												valueFormat="yyyyMMdd"/>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+											<Button text="" type="Reject" icon="sap-icon://delete" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabFilter>
+				</items>
+				<content>
+					<Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"
+						visible="true"/>
+				</content>
+			</IconTabBar>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Confirmar orden de ingreso" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true"
+						iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+	</Page>
+</mvc:View>

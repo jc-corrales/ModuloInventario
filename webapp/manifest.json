@@ -1,0 +1,373 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.maestroDetalle",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"ach": "ach",
+		"resources": "resources.json",
+		"dataSources": {
+			"local": {
+				"uri": "/here/goes/your/serviceUrl/local/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "sap.ui.ui5-template-plugin.2masterdetail",
+			"version": "1.32.5"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://detail-view",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "com.sap.build.standard.maestroDetalle.view.App",
+			"type": "XML",
+			"async": false,
+			"id": "app"
+		},
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"dataSource": "local",
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"preload": true,
+				"settings": {
+					"loadMetadataAsync": false,
+					"json": true,
+					"bJSON": true,
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"useBatch": true,
+					"refreshAfterChange": false,
+					"disableHeadRequestForToken": true
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.maestroDetalle.view",
+				"controlId": "idAppControl",
+				"clearTarget": false,
+				"controlAggregation": "detailPages",
+				"async": false,
+				"bypassed": {
+					"target": [
+						"DetalleHojaDeGasto",
+						"VistaHojasDeGasto"
+					]
+				}
+			},
+			"targets": {
+				"VistaHojasDeGasto": {
+					"controlAggregation": "masterPages",
+					"viewName": "VistaHojasDeGasto",
+					"viewId": "VistaHojasDeGasto",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetalleHojaDeGasto": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetalleHojaDeGasto",
+					"viewId": "DetalleHojaDeGasto",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaCategoriaDeProductos": {
+					"controlAggregation": "masterPages",
+					"viewName": "VistaCategoriaDeProductos",
+					"viewId": "VistaCategoriaDeProductos",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaOrdenesDeCompra": {
+					"controlAggregation": "masterPages",
+					"viewName": "VistaOrdenesDeCompra",
+					"viewId": "VistaOrdenesDeCompra",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaOrdenesDeCompra_1": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaOrdenesDeCompra_1",
+					"viewId": "VistaOrdenesDeCompra_1",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaDetalleDeOrdenDeCompra": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaDetalleDeOrdenDeCompra",
+					"viewId": "VistaDetalleDeOrdenDeCompra",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaDetalleIngreso_1": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaDetalleIngreso_1",
+					"viewId": "VistaDetalleIngreso_1",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetalleMaterialMedicoQuirugico": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetalleMaterialMedicoQuirugico",
+					"viewId": "DetalleMaterialMedicoQuirugico",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaInventarioDeAplicadores": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaInventarioDeAplicadores",
+					"viewId": "VistaInventarioDeAplicadores",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaCuchillete22": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaCuchillete22",
+					"viewId": "VistaCuchillete22",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaPedidos": {
+					"controlAggregation": "masterPages",
+					"viewName": "VistaPedidos",
+					"viewId": "VistaPedidos",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaListaDePedidos": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaListaDePedidos",
+					"viewId": "VistaListaDePedidos",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaDetallePedidos": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaDetallePedidos",
+					"viewId": "VistaDetallePedidos",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetalleMedicamentos": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetalleMedicamentos",
+					"viewId": "DetalleMedicamentos",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"VistaInventarioDeBolsaDeAgua": {
+					"controlAggregation": "detailPages",
+					"viewName": "VistaInventarioDeBolsaDeAgua",
+					"viewId": "VistaInventarioDeBolsaDeAgua",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"ListaOrdenDeSalida": {
+					"controlAggregation": "masterPages",
+					"viewName": "ListaOrdenDeSalida",
+					"viewId": "ListaOrdenDeSalida",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"ListaDeOrdenesDeSalida": {
+					"controlAggregation": "detailPages",
+					"viewName": "ListaDeOrdenesDeSalida",
+					"viewId": "ListaDeOrdenesDeSalida",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetalleOrdenDeSalida": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetalleOrdenDeSalida",
+					"viewId": "DetalleOrdenDeSalida",
+					"viewLevel": 1,
+					"transition": "slide"
+				}
+			},
+			"routes": [{
+				"pattern": "VistaHojasDeGasto",
+				"name": "VistaHojasDeGasto",
+				"target": [
+					"DetalleHojaDeGasto",
+					"VistaHojasDeGasto"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/DetalleHojaDeGasto/:context:",
+				"name": "DetalleHojaDeGasto",
+				"target": [
+					"VistaHojasDeGasto",
+					"DetalleHojaDeGasto"
+				]
+			}, {
+				"pattern": "VistaCategoriaDeProductos",
+				"name": "VistaCategoriaDeProductos",
+				"target": [
+					"DetalleHojaDeGasto",
+					"VistaCategoriaDeProductos"
+				]
+			}, {
+				"pattern": "VistaOrdenesDeCompra",
+				"name": "VistaOrdenesDeCompra",
+				"target": [
+					"DetalleHojaDeGasto",
+					"VistaOrdenesDeCompra"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaOrdenesDeCompra_1",
+				"name": "VistaOrdenesDeCompra_1",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaOrdenesDeCompra_1"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaDetalleDeOrdenDeCompra",
+				"name": "VistaDetalleDeOrdenDeCompra",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaDetalleDeOrdenDeCompra"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaDetalleIngreso_1",
+				"name": "VistaDetalleIngreso_1",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaDetalleIngreso_1"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/DetalleMaterialMedicoQuirugico/:context:",
+				"name": "DetalleMaterialMedicoQuirugico",
+				"target": [
+					"VistaHojasDeGasto",
+					"DetalleMaterialMedicoQuirugico"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaInventarioDeAplicadores/:context:",
+				"name": "VistaInventarioDeAplicadores",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaInventarioDeAplicadores"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaCuchillete22/:context:",
+				"name": "VistaCuchillete22",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaCuchillete22"
+				]
+			}, {
+				"pattern": "VistaPedidos",
+				"name": "VistaPedidos",
+				"target": [
+					"DetalleHojaDeGasto",
+					"VistaPedidos"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaListaDePedidos",
+				"name": "VistaListaDePedidos",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaListaDePedidos"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaDetallePedidos",
+				"name": "VistaDetallePedidos",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaDetallePedidos"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/DetalleMedicamentos/:context:",
+				"name": "DetalleMedicamentos",
+				"target": [
+					"VistaHojasDeGasto",
+					"DetalleMedicamentos"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/VistaInventarioDeBolsaDeAgua/:context:",
+				"name": "VistaInventarioDeBolsaDeAgua",
+				"target": [
+					"VistaHojasDeGasto",
+					"VistaInventarioDeBolsaDeAgua"
+				]
+			}, {
+				"pattern": "ListaOrdenDeSalida",
+				"name": "ListaOrdenDeSalida",
+				"target": [
+					"DetalleHojaDeGasto",
+					"ListaOrdenDeSalida"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/ListaDeOrdenesDeSalida",
+				"name": "ListaDeOrdenesDeSalida",
+				"target": [
+					"VistaHojasDeGasto",
+					"ListaDeOrdenesDeSalida"
+				]
+			}, {
+				"pattern": "VistaHojasDeGasto/DetalleOrdenDeSalida",
+				"name": "DetalleOrdenDeSalida",
+				"target": [
+					"VistaHojasDeGasto",
+					"DetalleOrdenDeSalida"
+				]
+			}, {
+				"pattern": "",
+				"name": "default",
+				"target": [
+					"DetalleHojaDeGasto",
+					"VistaHojasDeGasto"
+				]
+			}]
+		}
+	}
+}

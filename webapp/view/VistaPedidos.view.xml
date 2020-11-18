@@ -1,0 +1,61 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.maestroDetalle.controller.VistaPedidos" xmlns="sap.m">
+	<Page title="Listas de Pedidos" showHeader="true" showFooter="true" showNavButton="true">
+		<content>
+			<OverflowToolbar width="auto" height="46px" design="Solid" visible="true" enabled="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Crear nuevo pedido" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+			<List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true"
+				growingThreshold="20" growingScrollToLoad="true" visible="true">
+				<infoToolbar/>
+				<headerToolbar>
+					<Toolbar enabled="true" visible="true" width="" design="Solid">
+						<content>
+							<SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+				<items>
+					<ObjectListItem intro="" title="Últimos pedidos" number="" numberUnit="" numberState="None" type="Active" selected="false"
+						showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+					<ObjectListItem intro="" title="Pedidos pendientes por revisar" number="" numberUnit="" numberState="None" type="Active" selected="false"
+						showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+					<ObjectListItem intro="" title="Últimos pedidos entregados" number="" numberUnit="" numberState="None" type="Active" selected="false"
+						showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+					<ObjectListItem intro="" title="Pedidos pendientes entregar" number="" numberUnit="" numberState="None" type="Active" selected="false"
+						showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+					<ObjectListItem intro="" title="Todos los pedidos" number="" numberUnit="" numberState="None" type="Active" selected="false"
+						showMarkers="false">
+						<attributes/>
+						<firstStatus/>
+						<secondStatus/>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content/>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+	</Page>
+</mvc:View>

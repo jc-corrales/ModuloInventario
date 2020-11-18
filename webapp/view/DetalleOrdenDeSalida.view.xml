@@ -1,0 +1,228 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.maestroDetalle.controller.DetalleOrdenDeSalida" xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Page title="(# ID Orden de salida)" showHeader="true" showFooter="true" showNavButton="false">
+		<content>
+			<ObjectHeader intro="Intro." title="(# ID Orden de salida)" number="" numberUnit="" numberState="None" titleActive="false"
+				backgroundDesign="Translucent" condensed="false" visible="true">
+				<attributes>
+					<ObjectAttribute title="Entregado por" text="(Nombre usuario que genera la orden)" active="false" visible="true"/>
+					<ObjectAttribute title="Fecha de generación de orden" text="(Fecha del día en que se oprime el botón &quot;generar orden de salida&quot;)"
+						active="false" visible="true"/>
+				</attributes>
+				<statuses>
+					<ObjectStatus title="Estado envío" text="No enviado" state="None" visible="true"/>
+				</statuses>
+				<markers/>
+			</ObjectHeader>
+			<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true"
+				selectedKey="Ok">
+				<items>
+					<IconTabFilter icon="sap-icon://hint" iconColor="Default" text="Revisar" count="" design="Vertical" showAll="false" textDirection="Inherit"
+						enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false">
+								<items>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Origen:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="false" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Destino:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="false" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Entregado a:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="false" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								class="sapUiResponsiveMargin">
+								<infoToolbar/>
+								<headerToolbar/>
+								<columns>
+									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad requerida" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Lote" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Observaciones" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Active">
+										<cells>
+											<ObjectIdentifier title="Nombre producto" text="ID Producto" titleActive="false" visible="true"/>
+											<Text text="10" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<Text text="Text" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator icon="" iconDensityAware="false"/>
+					<IconTabFilter icon="sap-icon://edit" iconColor="Default" text="Editar" count="" design="Vertical" showAll="false" textDirection="Inherit"
+						enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<OverflowToolbar width="auto" height="46px" design="Solid" visible="true" enabled="true">
+								<content>
+									<ToolbarSpacer width=""/>
+									<Button text="Agregar nuevo elemento" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+									<Button text="Guardar" type="Emphasized" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true"
+										iconDensityAware="false"/>
+								</content>
+							</OverflowToolbar>
+							<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+								visible="true" displayInline="false">
+								<items>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Origen:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Destino:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+									<Text text="Entregado a:" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+									<ToolbarSpacer width="20px"/>
+									<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+										<items>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+											<core:Item text="Item" enabled="true" key="Item"/>
+										</items>
+									</ComboBox>
+									<ToolbarSpacer width="20px"/>
+								</items>
+								<layoutData/>
+							</HBox>
+							<Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true"
+								class="sapUiResponsiveMargin">
+								<infoToolbar/>
+								<headerToolbar/>
+								<columns>
+									<Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Product" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Cantidad requerida" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Lote" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+									<Column width="auto" hAlign="Center" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+										<header>
+											<Text text="Observaciones" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</header>
+										<footer/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Active">
+										<cells>
+											<ObjectIdentifier title="Nombre producto" text="ID Producto" titleActive="false" visible="true"/>
+											<HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div"
+												visible="true" displayInline="false">
+												<items>
+													<Button text="" type="Default" icon="sap-icon://less" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+													<TextArea value="10" rows="1" cols="10" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry"
+														visible="true"/>
+													<Button text="" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+												</items>
+												<layoutData/>
+											</HBox>
+											<ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+												<items>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+													<core:Item text="Item" enabled="true" key="Item"/>
+												</items>
+											</ComboBox>
+											<TextArea rows="1" cols="20" maxLength="0" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabFilter>
+				</items>
+				<content>
+					<Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"
+						visible="true"/>
+				</content>
+			</IconTabBar>
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Generar orden de salida" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true"
+						iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent/>
+	</Page>
+</mvc:View>

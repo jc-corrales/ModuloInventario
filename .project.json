@@ -1,0 +1,58 @@
+{
+	"dataBinding": {
+		"/webapp/view/VistaHojasDeGasto.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/DetalleHojaDeGasto.view.xml": {
+			"entitySet": "/HojasDeGastoSet"
+		},
+		"/webapp/view/VistaCategoriaDeProductos.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaOrdenesDeCompra.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaOrdenesDeCompra_1.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaDetalleDeOrdenDeCompra.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaDetalleIngreso_1.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/DetalleMaterialMedicoQuirugico.view.xml": {
+			"entitySet": "/CategoriasDeProductosSet"
+		},
+		"/webapp/view/VistaInventarioDeAplicadores.view.xml": {
+			"entitySet": "/ProductosSet"
+		},
+		"/webapp/view/VistaCuchillete22.view.xml": {
+			"entitySet": "/ProductosSet"
+		},
+		"/webapp/view/VistaPedidos.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaListaDePedidos.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/VistaDetallePedidos.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/DetalleMedicamentos.view.xml": {
+			"entitySet": "/CategoriasDeProductosSet"
+		},
+		"/webapp/view/VistaInventarioDeBolsaDeAgua.view.xml": {
+			"entitySet": "/ProductosSet"
+		},
+		"/webapp/view/ListaOrdenDeSalida.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/ListaDeOrdenesDeSalida.view.xml": {
+			"entitySet": ""
+		},
+		"/webapp/view/DetalleOrdenDeSalida.view.xml": {
+			"entitySet": ""
+		}
+	}
+}
